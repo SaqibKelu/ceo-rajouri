@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Mr. A. B. Sharma",
+    "designation": "Chief Education Officer",
+    "section": "Admin",
+    "email": "ceorajouri@example.com",
+    "phone": "+91-12345-67890"
+  },
+  {
+    "name": "Ms. R. K. Verma",
+    "designation": "Dy. Chief Education Officer",
+    "section": "Planning",
+    "email": "dyceo@example.com",
+    "phone": "+91-12345-67891"
+  },
+  {
+    "name": "Mr. S. Ahmed",
+    "designation": "Accounts Officer",
+    "section": "Accounts",
+    "email": "accounts@example.com",
+    "phone": "+91-12345-67892"
+  }
+]

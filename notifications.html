@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>notifications | CEO Rajouri</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<section class="py-5 bg-light border-bottom">
+  <div class="container">
+    <h1 class="fw-bold mb-2">notifications</h1>
+    <p class="text-muted mb-0">Office of the Chief Education Officer, Rajouri</p>
+  </div>
+</section>
+
+<section class="py-5">
+<div class="container">
+
+<div class="ceo-table-wrapper">
+<table class="table table-bordered table-hover align-middle ceo-table">
+<thead class="table-primary">
+<tr>
+  <th style="width:80px">S. No.</th>
+  <th>Notification  No.</th>
+  <th>Title</th>
+  <th style="width:160px">Date</th>
+  <th style="width:120px" class="text-center">PDF</th>
+</tr>
+</thead>
+<tbody id="dataTableBody">
+<tr><td colspan="5" class="text-center text-muted">Loading...</td></tr>
+</tbody>
+</table>
+</div>
+
+</div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/component-loader.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+async function loadData() {
+  const tbody = document.getElementById("dataTableBody");
+  try {
+    const res = await fetch("assets/data/notifications.json");
+    if (!res.ok) throw new Error("Failed to load JSON");
+    const data = await res.json();
+    tbody.innerHTML = "";
+
+    if (!Array.isArray(data) || data.length === 0) {
+      tbody.innerHTML = `<tr><td colspan="5" class="text-center text-muted">No records found.</td></tr>`;
+      return;
+    }
+
+    data.forEach((item, i) => {
+      const tr = document.createElement("tr");
+      const pdfPath = "resources/notifications/" + item.file;
+
+      tr.innerHTML = `
+        <td data-label="S. No.">${i + 1}</td>
+        <td data-label="Notification No.">${item.number}</td>
+        <td data-label="Title">${item.title}</td>
+        <td data-label="Date">${item.date}</td>
+        <td data-label="PDF" class="text-center">
+          <a href="${pdfPath}" target="_blank" class="btn btn-outline-primary btn-sm">
+            <i class="bi bi-file-earmark-pdf-fill me-1"></i> View
+          </a>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+
+  } catch (e) {
+    console.error(e);
+    tbody.innerHTML = `<tr><td colspan="5" class="text-danger text-center">Failed to load data</td></tr>`;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", loadData);
+</script>
+
+</body>
+</html>

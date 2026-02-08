@@ -1,0 +1,135 @@
+<!-- Hero Carousel Component -->
+<section class="hero-carousel-section">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+
+        <!-- Carousel Inner -->
+        <div class="carousel-inner">
+            <!-- Slide 1 - Custom Banner (No Text Overlay) -->
+            <div class="carousel-item active">
+                <div class="carousel-image-wrapper carousel-custom-banner">
+                    <img src="assets/banners/banner1.png" class="d-block w-100" alt="CEO Rajouri Banner">
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="carousel-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=1920&h=600&fit=crop" class="d-block w-100" alt="Scholarship distribution">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-caption-custom">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8">
+                                <span class="badge-announcement bg-success">
+                                    <i class="bi bi-trophy-fill me-2"></i>Scholarship Program
+                                </span>
+                                <h1 class="display-4 fw-bold mb-3 animate-slide-up">
+                                    Merit Scholarships 2026
+                                </h1>
+                                <p class="lead mb-4 animate-slide-up-delay">
+                                    Applications invited for merit-based scholarships. Over 500 scholarships available for deserving students across all categories.
+                                </p>
+                                <div class="d-flex gap-3 flex-wrap animate-slide-up-delay-2">
+                                    <a href="scholarships.html" class="btn btn-success btn-lg">
+                                        <i class="bi bi-file-earmark-text me-2"></i>View Details
+                                    </a>
+                                    <a href="forms.html" class="btn btn-outline-light btn-lg">
+                                        <i class="bi bi-pencil-square me-2"></i>Apply Online
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="carousel-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1920&h=600&fit=crop" class="d-block w-100" alt="Digital education">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-caption-custom">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8">
+                                <span class="badge-announcement bg-info">
+                                    <i class="bi bi-laptop me-2"></i>Digital Initiative
+                                </span>
+                                <h1 class="display-4 fw-bold mb-3 animate-slide-up">
+                                    Smart Classrooms Project Launched
+                                </h1>
+                                <p class="lead mb-4 animate-slide-up-delay">
+                                    100+ schools to be equipped with smart classrooms and digital learning resources under the Digital Education Initiative.
+                                </p>
+                                <div class="d-flex gap-3 flex-wrap animate-slide-up-delay-2">
+                                    <a href="digital-edu.html" class="btn btn-info btn-lg">
+                                        <i class="bi bi-info-circle me-2"></i>Learn More
+                                    </a>
+                                    <a href="schools.html" class="btn btn-outline-light btn-lg">
+                                        <i class="bi bi-building me-2"></i>Participating Schools
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+                <div class="carousel-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1920&h=600&fit=crop" class="d-block w-100" alt="Teacher training">
+                    <div class="carousel-overlay"></div>
+                </div>
+                <div class="carousel-caption-custom">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8">
+                                <span class="badge-announcement bg-warning">
+                                    <i class="bi bi-calendar-event me-2"></i>Important Notice
+                                </span>
+                                <h1 class="display-4 fw-bold mb-3 animate-slide-up">
+                                    Teacher Training Workshop - March 2026
+                                </h1>
+                                <p class="lead mb-4 animate-slide-up-delay">
+                                    Mandatory training program for all teaching staff on modern pedagogy and NEP 2020 implementation. Registration deadline: March 15, 2026.
+                                </p>
+                                <div class="d-flex gap-3 flex-wrap animate-slide-up-delay-2">
+                                    <a href="teacher-services.html" class="btn btn-warning btn-lg">
+                                        <i class="bi bi-person-check me-2"></i>Register Now
+                                    </a>
+                                    <a href="downloads.html" class="btn btn-outline-light btn-lg">
+                                        <i class="bi bi-file-pdf me-2"></i>View Schedule
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-icon">
+                <i class="bi bi-chevron-left"></i>
+            </span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-icon">
+                <i class="bi bi-chevron-right"></i>
+            </span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
